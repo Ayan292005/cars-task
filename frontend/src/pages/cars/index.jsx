@@ -32,7 +32,7 @@ function Cars() {
     <>
       <table style={{ width: "90%", margin: "0 auto" }}>
         <thead>
-          <tr style={{textAlign:"left"}}>
+          <tr style={{textAlign:"left"}} >
             <th>Brand Name</th>
             <th>Model Name</th>
             <th>year</th>
@@ -44,15 +44,13 @@ function Cars() {
         <tbody>
           {
             data && data.map(car => (
-              <tr key={car._id}>
+              <tr key={car._id} style={{backgroundColor:car.CarisNew ? "green" : "red"}} >
                 <td>{car.brandName}</td>
                 <td>{car.modelName}</td>
                 <td>{car.year}</td>
                 <td>{car.color}</td>
                 <td><button ><NavLink to={`/cars/${car._id}`} style={{textDecoration:"none",color:"black"}}>Details</NavLink></button></td>
                 <td><button  onClick={() => deleteData(car._id)}>Delete</button> </td>
-              
-
               </tr>
             ))
           }

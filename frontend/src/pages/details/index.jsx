@@ -10,7 +10,7 @@ function Details() {
   function getDetails() {
       axios.get(`http://localhost:4000/cars/${id}`)
           .then(res => {
-              setProduct(res.data)
+              setProduct(res.data.data)
           })
   }
   useEffect(() => {
