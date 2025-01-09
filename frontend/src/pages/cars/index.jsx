@@ -21,10 +21,10 @@ function Cars() {
     let dataId = data.filter(el => el._id !== id)
     setData(dataId)
 
-    // axios.delete(`${DBurl}/${id}`)
-    //   .then(() => {
-    //     getData()
-    //   })
+    axios.delete(`${DBurl}/${id}`)
+      .then(() => {
+        getData()
+      })
   }
 
 

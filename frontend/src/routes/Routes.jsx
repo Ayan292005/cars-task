@@ -1,4 +1,5 @@
 import UserRoot from "../pages/UserRoot"
+import Add from "../pages/addPage"
 import Cars from "../pages/cars"
 import Details from "../pages/details"
 
@@ -16,6 +17,10 @@ const Routes = [
             {
                 path: "/cars/:id",
                 element: <Details />,
+            },
+            {
+                path: "/cars/add",
+                element: <Add />,
             }
         ]
     }
